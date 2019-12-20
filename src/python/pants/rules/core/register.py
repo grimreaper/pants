@@ -4,6 +4,7 @@
 from pants.rules.core import (
   binary,
   cloc,
+  debug_info,
   distdir,
   filedeps,
   fmt,
@@ -30,5 +31,6 @@ def rules():
     *run.rules(),
     *strip_source_root.rules(),
     *distdir.rules(),
-    *test.rules()
+    *test.rules(),
+    *debug_info.rules(),
   ]
